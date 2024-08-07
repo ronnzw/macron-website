@@ -2,11 +2,68 @@
 {% load static %}
 
 {% block content %}
+<!-- Carousel start -->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" >
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    </div>
+
+    <div class="carousel-inner carousel-img-size">
+      <div class="carousel-item active">
+        <img src="{% static 'img/womencoding.jpg' %}" style="filter: brightness(0.7);" class="d-block w-100" alt="img">
+        <div class="carousel-caption text-start mb-5">
+                <h1 class="text-light main-text display-2 fw-bolder text-capitalize">Online Presences Solutions</h1>
+                <p class="">Get your brand to standout & have credibility from your customers. We have it all to ensure your brand is well known, from static websites to dynamic websites and web applications. Professional emails for SME & large Enterprises. Mobile applications for iOS devices and android devices. We provide digital and social media marketing as well. </p>
+                <a href="{% url 'website:services' %}" class="btn macronbutton mt-3">Learn More</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/emile.jpg' %}" class="d-block w-100" style="filter: brightness(0.7);" alt="img">
+        <div class="carousel-caption text-start mb-5 d-none d-md-block">
+          <h1 class="text-light main-text display-2 fw-bolder text-capitalize">Website Development</h1>
+            <p>Our websites are fully responsive on desktop & mobile. We make both static websites and dynamic websites. We take care of Integrations to payment systems and live chatting systems. If you don't have a design, don't worry we have got you. We take pride in our attention to detail to give your clients a great user experience. </p>
+            <a href="{% url 'website:services' %}" class="btn macronbutton mt-3">Learn More</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/email.jpg' %}" class="img-fluid d-block w-100" alt="img">
+        <div class="carousel-caption text-start mb-5 d-none d-md-block">
+          <h1 class="text-light main-text display-2 fw-bolder text-capitalize">Microsoft 365 Governance, PowerApps & Power Automate</h1>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/choong.jpg' %}" class="img-fluid d-block w-100" style="filter: brightness(0.7);" alt="img">
+        <div class="carousel-caption text-start mb-5 d-none d-md-block">
+          <h1 class="text-light main-text display-2 fw-bolder text-capitalize">Insider Risk management, Data Analytics and Visualisation</h1>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/code.jpg' %}" class="d-block w-100" alt="img">
+        <div class="carousel-caption text-start mb-5 d-none d-md-block">
+          <h1 class="text-light main-text display-3 fw-bolder text-capitalize">Software Development technical Debt & Documentation</h1>
+            <p>We have experienced Senior Engineers that can take care of your technical documentation to allow you to focus on the more pressing issues. We can handle all your technical debt for you.</p>
+            <a href="{% url 'website:services' %}" class="btn macronbutton mt-3">Learn More</a>
+        </div>
+      </div>
+      
+
+    </div>
+  </div>
+<!-- Carousel end -->
+
+
+
+
+
 <!-- Header start -->
 <div class="container">
     <div class="row">
         <div class="col-6 offset-3">
-            <h1 class="text-light fw-bolder text-capitalize text-center mt-5">
+            <h1 class="text-light main-text fw-bolder text-capitalize text-center mt-5">
                 We are a progressive digital growth accelerator.
             </h1>
             <hr class="col-2 offset-5 mb-5" style="color: #eb8228;">
@@ -16,32 +73,13 @@
 <!-- Header end -->
 
 
+
+
+
 <!-- Card stacking start -->
-<div class="container">
+<div class="container" id="stacking">
     <div class="row">
-        <div class="col-12 clstack justify-content-evenly"> <img class="clstackimg" src="static/img/codioful.jpg" alt="bg image">
-            <div class="stacking-container">
-                <h2 class="gradient-text">Business Emails</h2>
-                <br><h4>Unlock the Potential of Your Brand with a Custom Email Address</h4><br>
-                <p class="stacking-text">Elevate your business's professionalism and credibility by securing a custom email address tailored to your brand.</p>
-                <button type="button" class="btn macronbutton">Get quote</button>
-            </div>
-            <div>
-                <img class="img-fluid" src="static/img/email.jpg" style="height: auto; width: 400px; position: relative; object-fit: cover;" alt="">
-            </div>
-        </div>
-        <div class="col-12 clstack"> <img class="clstackimg" src="static/img/3dsplash.jpg" alt="bg image">
-            <div class="stacking-container">
-                <h2 class="gradient-text">Website design & development</h2>
-                <br><h4>Empower Your Business with a Stunning Website</h4><br>
-                <p class="stacking-text">Take your online presence to the next level with a professionally crafted website tailored to your unique brand and goals. Our team of experts specializes in designing and developing visually appealing and user-friendly websites that captivate audiences and drive results.</p>
-                <button type="button" class="btn macronbutton">Get quote</button>
-            </div>
-            <div>
-                <img class="img-fluid" src="static/img/email.jpg" style="height: auto; width: 400px; position: relative; object-fit: cover;" alt="">
-            </div>
-        </div>
-        <div class="col-12 clstack"> <img class="clstackimg" src="static/img/richard.jpg" alt="bg image">
+        <div class="col-12 clstack justify-content-evenly"> <img class="clstackimg" src="{% static 'img/codioful.jpg' %}" alt="bg image">
             <div class="stacking-container">
                 <h2 class="gradient-text">Digital Software Systems</h2>
                 <br>
@@ -53,10 +91,29 @@
                     <li>School management & reporting systems</li>
                 </ul>
                 <br>
-                <button type="button" class="btn macronbutton">Get quote</button>
-            </div>   
+                <a href="{% url 'website:contacts' %}" class="btn macronbutton">Get quote</a>
+            </div> 
         </div>
-        <div class="col-12 clstack"> <img class="clstackimg" src="static/img/milad.jpg" alt="bg image">
+        <div class="col-12 clstack"> <img class="clstackimg" src="{% static 'img/3dsplash.jpg' %}" alt="bg image">
+            <div class="stacking-container">
+                <h2 class="gradient-text">Website design & development & Mobile applications</h2>
+                <br><h4>Empower Your Business with a Stunning Website</h4><br>
+                <p class="stacking-text">Take your online presence to the next level with a professionally crafted website tailored to your unique brand and goals. Our team of experts specializes in designing and developing visually appealing and user-friendly websites that captivate audiences and drive results.</p>
+                <a href="{% url 'website:contacts' %}" class="btn macronbutton">Get quote</a>
+            </div>
+        </div>
+        <div class="col-12 clstack"> <img class="clstackimg" src="{% static 'img/richard.jpg' %}" alt="bg image">
+            <div class="stacking-container">
+                <h2 class="gradient-text">Data Analysis & Visualization</h2>
+
+                <br><h4>Uncover Insights, Transform Data</h4>
+                <br>
+                <p class="stacking-text">Harness the power of data to make informed decisions and drive growth with our data analysis and visualization services. </p>
+                <br>
+                <a href="{% url 'website:contacts' %}" class="btn macronbutton">Get quote</a>
+            </div>  
+        </div>
+        <div class="col-12 clstack"> <img class="clstackimg" src="{% static 'img/milad.jpg' %}" alt="bg image">
             <div class="stacking-container">
                 <h2 class="gradient-text">Microsoft M365, PowerApps & PowerAutomate</h2>
                 <br>
@@ -68,10 +125,10 @@
                     <li>Insider Risk Management</li>
                 </ul>
                 <br>
-                <button type="button" class="btn macronbutton">Get quote</button>
+                <a href="{% url 'website:contacts' %}" class="btn macronbutton">Get quote</a>
             </div> 
         </div>
-        <div class="col-12 clstack"> <img class="clstackimg" src="static/img/pawel.jpg" alt="bg image">
+        <div class="col-12 clstack"> <img class="clstackimg" src="{% static 'img/pawel.jpg' %}" alt="bg image">
             <div class="stacking-container">
                 <h2 class="gradient-text">Process Automation</h2>
                 <br>
@@ -81,19 +138,16 @@
                     <li> Robotic Process Automation e.g. Trading robots</li>
                 </ul>
                 <br>
-                <button type="button" class="btn macronbutton">Get quote</button>
+                <a href="{% url 'website:contacts' %}" class="btn macronbutton">Get quote</a>
             </div> 
         </div>
-        <div class="col-12 clstack"> <img class="clstackimg" src="static/img/codiofulunsplash.jpg" alt="bg image">
+        <div class="col-12 clstack"> <img class="clstackimg" src="{% static 'img/codiofulunsplash.jpg' %}" alt="bg image">
             <div class="stacking-container">
-                <h2 class="gradient-text">Data Analysis & Visualization</h2>
-
-                <br><h4>Uncover Insights, Transform Data</h4>
-                <br>
-                <p class="stacking-text">Harness the power of data to make informed decisions and drive growth with our data analysis and visualization services. </p>
-                <br>
-                <button type="button" class="btn macronbutton">Get quote</button>
-            </div> 
+                <h2 class="gradient-text">Business Emails</h2>
+                <br><h4>Unlock the Potential of Your Brand with a Custom Email Address</h4><br>
+                <p class="stacking-text">Elevate your business's professionalism and credibility by securing a custom email address tailored to your brand.</p>
+                <a href="#" class="btn macronbutton">Get quote</a>
+            </div>
         </div>
     </div>
 </div>
@@ -101,11 +155,12 @@
 
 
 
+
 <!-- Code for cards start -->
-<div class="container">
+<div class="container ">
     <div class="row">
         <div class="col-6 offset-3">
-            <h1 class="text-light fw-bolder text-capitalize text-center mt-5">
+            <h1 class="text-light main-text fw-bolder text-capitalize text-center mt-5">
                 Why Should You Choose Us?
             </h1>
             <hr class="col-2 offset-5 mb-5" style="color: #eb8228;">
@@ -133,8 +188,8 @@
           <div class="card-body">
             <h5 class="card-title text-center text-uppercase fw-bolder">Security</h5>
             <p class="card-text">
-              We are aware that some of our clients have minimal knowledge on cyber security so this is a service that we will offer dispite your engagement with us 
-            . We follow the Zero trust approach to ensure the all the systems and services we provide are of the highest cyber security standard. We are committed to protecting your data.</p>
+              We are aware that some of our clients have minimal knowledge on cyber security so this is a service that we will offer when you engage us 
+            . We follow the Zero trust approach to ensure that all the systems and services we provide are of high cyber security standards. We are committed to protecting your data.</p>
           </div>
         </div>
       </div>
@@ -159,7 +214,7 @@
   <div class="container">
     <div class="row">
         <div class="col-6 offset-3">
-            <h1 class="text-light fw-bolder text-capitalize text-center mt-5">
+            <h1 class="text-light main-text fw-bolder text-capitalize text-center mt-5">
                 Our Strategic Partners
             </h1>
             <hr class="col-2 offset-5 mb-5">
@@ -171,16 +226,16 @@
 <div class="container">
     <div class="row">
         <div class="col-md-3 text-center">
-            <img class="img-fluid" src="static/img/aws.png" style="height: 100px; width: auto;" alt="aws logo">
+            <img class="img-fluid" src="{% static 'img/aws.png' %}" style="height: 100px; width: auto;" alt="aws logo">
         </div>
         <div class="col-md-3 text-center">
-            <img class="img-fluid" src="static/img/microsoft.png" style="height: 120px; width: auto;" alt="ms logo">
+            <img class="img-fluid" src="{% static 'img/microsoft.png' %}" style="height: 120px; width: auto;" alt="ms logo">
         </div>
         <div class="col-md-3 text-center">
-            <img class="img-fluid" src="static/img/webdev.png" style="height: 80px; width: auto;" alt="web logo">
+            <img class="img-fluid" src="{% static 'img/webdev.png' %}" style="height: 80px; width: auto;" alt="web logo">
         </div>
         <div class="col-md-3 text-center">
-            <img class="img-fluid" src="static/img/bootstrap.png" style="height: 100px; width: auto;" alt="partner logo">
+            <img class="img-fluid" src="{% static 'img/bootstrap.png' %}" style="height: 100px; width: auto;" alt="partner logo">
         </div>
     </div>
 </div>
@@ -194,7 +249,7 @@
 <div class="container">
     <div class="row">
         <div class="col-6 offset-3">
-            <h1 class="text-light fw-bolder text-capitalize text-center mt-5">
+            <h1 class="text-light main-text fw-bolder text-capitalize text-center mt-5">
                 Sustainable Development Goals
             </h1>
             <hr class="col-2 offset-5 mb-5" style="color: #eb8228;">
@@ -211,16 +266,16 @@
                 that are affecting the world.
             </h4>
             <br>
-            <button type="button" class="btn macronbutton mb-4">Partner with us</button>
+            <a href="{% url 'website:contacts' %}" class="btn macronbutton">Partner with us</a>
         </div>
         <div class="col-md-2 col-sm-12 text-center mb-2">
-            <img class="img-fluid" src="static/img/sdg5.png" alt="img">
+            <img class="img-fluid" src="{% static 'img/sdg5.png' %}" alt="img">
         </div>
         <div class="col-md-2 col-sm-12 text-center mb-2">
-            <img class="img-fluid" src="static/img/sdg8.png" alt="img">
+            <img class="img-fluid" src="{% static 'img/sdg8.png' %}" alt="img">
         </div>
         <div class="col-md-2 col-sm-12 text-center mb-2">
-            <img class="img-fluid" src="static/img/sdg9.png" alt="img">
+            <img class="img-fluid" src="{% static 'img/sdg9.png' %}" alt="img">
         </div>
     </div>
 </div>

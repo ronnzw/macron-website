@@ -31,8 +31,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    #third parties
+    "crispy_forms",
+    "crispy_bootstrap4",
+
     'website'
 ]
+
+# Crispy forms things
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -114,5 +122,9 @@ STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
+
+
+
+ACCOUNT_EMAIL_VERIFICATION = "none"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
