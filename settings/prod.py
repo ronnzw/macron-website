@@ -8,7 +8,7 @@ load_dotenv()
 
 SECRET_KEY = os.environ.get('PROD_SECRET_KEY')
 DEBUG = os.environ.get('PROD_DEBUG') == 'True'
-ALLOWED_HOSTS = ['www.macronsynergy.co.zw','https://www.macronsynergy.co.zw', 'macronsynergy.co.zw','http://127.0.0.1:8000/','127.0.0.1']
+ALLOWED_HOSTS = ['www.macronsynergy.co.zw','https://www.macronsynergy.co.zw', 'https://macronsynergy.co.zw', 'macronsynergy.co.zw']
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = os.environ.get('EMAIL_HOST')
